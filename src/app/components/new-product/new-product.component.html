@@ -1,0 +1,8 @@
+<app-role></app-role>
+<form action="" [formGroup]="newProduct" (ngSubmit)="onSubmit(newProduct)">
+  <input type="text" formControlName="name">
+  <textarea name="" id="" cols="30" rows="10" formControlName="description"></textarea>
+  <input type="number" formControlName="price">
+  <button type="submit">Add product</button>
+</form>
+<a routerLink="/list">go to list</a>

@@ -3,18 +3,17 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } fro
 import { Observable } from 'rxjs';
 import {UserService} from '../../services/user/user.service';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class UserGuard implements CanActivate {
+export class OwnerGuard implements CanActivate {
 
-  constructor(public userService: UserService) {
-
-  }
+  constructor(public userService: UserService) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.userService.userRole === 'admin';
+    return this.userService.userRole !== 'user';
   }
 }

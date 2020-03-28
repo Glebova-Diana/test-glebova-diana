@@ -1,0 +1,13 @@
+<div class="header__lang-box">
+  <span>Current user role: {{userService.userRole}}</span>
+  <form class="language">
+    <button type="button" (click)="setRole($event)" class="header__lang header__lang-active" value="user">
+      User
+    </button>
+    <button type="button" (click)="setRole($event)" class="langDown header__lang header__lang-down" value="admin">
+      Admin</button>
+    <button type="button" (click)="setRole($event)" class="langDown header__lang header__lang-down" value="owner">
+      Owner</button>
+  </form>
+</div>
+

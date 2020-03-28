@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: calc(100% / 4 - 30px);
+  margin: 0 15px 30px;
+  border: 2px solid #ccc;
+}

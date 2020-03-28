@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RoleComponent } from './role/role.component';
-import { ListComponent } from './list/list.component';
-import { NewProductComponent } from './new-product/new-product.component';
-import { EditComponent } from './edit/edit.component';
-import { ProductComponent } from './product/product.component';
+import { RoleComponent } from './components/role/role.component';
+import { ListComponent } from './components/list/list.component';
+import { NewProductComponent } from './components/new-product/new-product.component';
+import { EditComponent } from './components/edit/edit.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,14 @@ import { ProductComponent } from './product/product.component';
     RoleComponent,
     ListComponent,
     NewProductComponent,
-    EditComponent,
-    ProductComponent
+    EditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

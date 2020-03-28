@@ -1,0 +1,9 @@
+<app-role></app-role>
+<form action="" [formGroup]="editedProduct" (ngSubmit)="onSubmit(editedProduct)">
+  <input type="text" formControlName="name">
+  <textarea name="" id="" cols="30" rows="10" formControlName="description"></textarea>
+  <input type="number" formControlName="price">
+  <button type="submit">Edit product</button>
+  <button type="button" (click)="deleteProduct()">Delete product</button>
+</form>
+<a routerLink="/list">go to list</a>

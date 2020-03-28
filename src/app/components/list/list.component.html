@@ -1,0 +1,12 @@
+<app-role></app-role>
+<p>list works!</p>
+<div class="wrapper">
+  <div class="product" *ngFor="let product of products">
+    <span class="product__name">{{ product.name }}</span>
+    <p class="product__description">{{ product.description }}</p>
+    <span class="product__price">{{ product.price }} uah</span>
+    <button *ngIf="userService.userRole !== 'user'" (click)="editProduct(product)">go to edit product</button>
+  </div>
+</div>
+<br>
+<a routerLink="/new-product" *ngIf="userService.userRole === 'admin'">go to new product</a>
