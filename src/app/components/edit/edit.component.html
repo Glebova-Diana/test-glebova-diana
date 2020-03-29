@@ -1,9 +1,23 @@
 <app-role></app-role>
-<form action="" [formGroup]="editedProduct" (ngSubmit)="onSubmit(editedProduct)">
-  <input type="text" formControlName="name">
-  <textarea name="" id="" cols="30" rows="10" formControlName="description"></textarea>
-  <input type="number" formControlName="price">
-  <button type="submit">Edit product</button>
-  <button type="button" (click)="deleteProduct()">Delete product</button>
+<form class="form" action="" [formGroup]="editedProduct" (ngSubmit)="onSubmit(editedProduct)">
+  <label class="form__name">
+    <span class="form__name--text">name*</span>
+    <input class="form__name--value" type="text"
+           formControlName="name" required>
+  </label>
+  <label class="form__name">
+    <span class="form__name--text">description*</span>
+    <textarea class="form__name--value form__name--descr"
+              formControlName="description" required></textarea>
+  </label>
+  <label class="form__name">
+    <span class="form__name--text">price*</span>
+    <input class="form__name--value" type="number"
+           formControlName="price" inputmode="numeric" required>
+  </label>
+  <div class="form__btn-box">
+    <button class="form__submit" type="submit"
+            [disabled]="!editedProduct.valid">Save changes</button>
+    <button class="form__delete" type="button" (click)="deleteProduct()">Delete product</button>
+  </div>
 </form>
-<a routerLink="/list">go to list</a>
