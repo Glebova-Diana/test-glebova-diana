@@ -7,6 +7,7 @@ import { ListComponent } from './components/list/list.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from './shared/shared.module';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {SharedModule} from './shared/shared.module';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

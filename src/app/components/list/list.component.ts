@@ -12,6 +12,9 @@ export class ListComponent implements OnInit {
 
   private products: [];
 
+  p = 1;
+  // collection: any[] = someArrayOfThings;
+
   constructor(
     public productsService: ProductsService,
     public router: Router,

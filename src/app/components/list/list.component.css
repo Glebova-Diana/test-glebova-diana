@@ -1,6 +1,11 @@
 .wrapper {
+  width: 100%;
+}
+
+.product-box {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .product {
@@ -70,4 +75,11 @@
   font-size: 26px;
   color: #DBBDAF;
   text-align: right;
+}
+
+::ng-deep .ngx-pagination .current {
+  color: #CDA9AB!important;
+  border: 1px solid #CDA9AB;
+  background: white!important;
+  cursor: default;
 }

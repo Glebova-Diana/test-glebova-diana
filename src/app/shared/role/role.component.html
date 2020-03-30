@@ -1,6 +1,5 @@
 <header class="header">
   <div class="header__lang-box">
-    <span>Current user role: {{userService.userRole}}</span>
     <span class="header__txt">There should be a beautiful dropdown →</span>
     <select name="role" [value]="userService.userRole" (change)="setRole($event)">
       <option (click)="setRole($event)" class="" value="user">User</option>
