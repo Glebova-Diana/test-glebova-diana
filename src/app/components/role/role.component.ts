@@ -27,5 +27,4 @@ export class RoleComponent implements OnInit {
       this.router.navigate(['/list']);
     }
   }
-
 }

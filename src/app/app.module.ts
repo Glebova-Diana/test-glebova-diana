@@ -7,7 +7,7 @@ import { RoleComponent } from './components/role/role.component';
 import { ListComponent } from './components/list/list.component';
 import { NewProductComponent } from './components/new-product/new-product.component';
 import { EditComponent } from './components/edit/edit.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
