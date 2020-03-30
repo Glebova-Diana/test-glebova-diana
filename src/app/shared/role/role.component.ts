@@ -22,7 +22,7 @@ export class RoleComponent implements OnInit {
   }
 
   checkRole() {
-    if ( (this.userService.userRole === 'user' && this.router.url === '/edit') ||
+    if ( (this.userService.userRole === 'user' && this.router.url === '/editProduct') ||
       ((this.userService.userRole === 'user' || 'owner') && this.router.url === '/newProduct') ) {
       this.router.navigate(['/list']);
     }

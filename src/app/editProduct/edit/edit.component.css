@@ -1,0 +1,109 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 25px;
+
+  border-radius: 10px;
+  background: white;
+  -webkit-box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+.form__name {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form__name--text {
+  display: inline-flex;
+  width: 30%;
+}
+
+.form__name--value {
+  display: inline-flex;
+  width: 69%;
+  border: none;
+  border-bottom: 2px solid #CDA9AB;
+  resize: none;
+  outline: none;
+}
+
+.form__name--descr {
+  height: 80px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form__btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .form__btn-box {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.form__submit,
+.form__delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 220px;
+  max-width: 48%;
+
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form__submit {
+  background: #CDA9AB;
+}
+
+.form__submit:hover,
+.form__delete:hover {
+  -webkit-box-shadow: 0 0 7px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 7px -2px rgba(0,0,0,0.75);
+  box-shadow: 0 0 7px -2px rgba(0,0,0,0.75);
+}
+
+.form__submit:active,
+.form__delete:active {
+  box-shadow: none;
+}
+
+.form__submit:disabled,
+.form__submit:hover:disabled,
+.form__delete:disabled,
+.form__delete:hover:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.form__delete {
+  background: #3F51B5;
+}

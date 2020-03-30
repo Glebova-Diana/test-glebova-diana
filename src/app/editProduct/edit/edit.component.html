@@ -1,0 +1,23 @@
+<app-role></app-role>
+<form class="form" action="" [formGroup]="editedProduct" (ngSubmit)="onSubmit(editedProduct)">
+  <label class="form__name">
+    <span class="form__name--text">name*</span>
+    <input class="form__name--value" type="text"
+           formControlName="name" required>
+  </label>
+  <label class="form__name">
+    <span class="form__name--text">description*</span>
+    <textarea class="form__name--value form__name--descr"
+              formControlName="description" required></textarea>
+  </label>
+  <label class="form__name">
+    <span class="form__name--text">price*</span>
+    <input class="form__name--value" type="number"
+           formControlName="price" inputmode="numeric" required>
+  </label>
+  <div class="form__btn-box">
+    <button class="form__submit" type="submit"
+            [disabled]="!editedProduct.valid">Save changes</button>
+    <button class="form__delete" type="button" (click)="deleteProduct()">Delete product</button>
+  </div>
+</form>
