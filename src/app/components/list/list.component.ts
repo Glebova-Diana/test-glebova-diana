@@ -36,6 +36,6 @@ export class ListComponent implements OnInit {
 
   editProduct(product) {
     this.productsService.selectedProduct = product;
-    this.router.navigate(['/edit']);
+    this.router.navigate(['/editProduct']);
   }
 }

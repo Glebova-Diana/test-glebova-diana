@@ -22,7 +22,9 @@
   height: 45px;
 
   color: white;
+  border: none;
   background: #CDA9AB;
+  cursor: pointer;
 }
 
 .header__link--edit {
